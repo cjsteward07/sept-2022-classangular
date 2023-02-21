@@ -9,21 +9,25 @@ import { DungeonComponent } from './dungeon/dungeon.component';
 import { BossMonsterComponent } from './boss-monster/boss-monster.component';
 import { BossMonstersModule } from './boss-monsters/boss-monsters.module';
 import { CoreModule } from './core/core.module';
-
+import {HttpClientModule} from '@angular/common/http';
+import { CharacterClassListComponent } from './character-class/character-class-list/character-class-list.component';
+import { CharacterClassModule } from './character-class/character-class.module';
 @NgModule({
   declarations: [
     AppComponent,
     GreeterComponent,
     BackStoryComponent,
     DungeonComponent,
-    BossMonsterComponent
+    BossMonsterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     BossMonstersModule,
-    CoreModule
+    CoreModule,
+    CharacterClassModule
     ],
   providers: [],
   bootstrap: [AppComponent]
